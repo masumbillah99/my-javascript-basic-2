@@ -31,3 +31,26 @@ const grayBtn = document.getElementById('make-gray');
 grayBtn.addEventListener('click', function () {
     document.body.style.backgroundColor = 'lightgray';
 })
+
+
+// handle event by add onclick function
+function handleOnClick() {
+    const handlerStatus = document.getElementById('handler-status');
+    handlerStatus.innerText = "Handled by function attached on onclick";
+}
+
+// option 2
+document.getElementById('event-listener').addEventListener('click', function () {
+    const handlerStatus = document.getElementById('handler-status');
+    handlerStatus.innerText = 'Text updated by add event Listener Button';
+})
+
+// option 2 : recap
+document.getElementById('btn-update').addEventListener('click', function () {
+    const inputField = document.getElementById('input-field');
+    const inputText = inputField.value;
+
+    const p = document.getElementById('input-text-display');
+    p.innerText = inputText;
+    inputField.value = '';
+})

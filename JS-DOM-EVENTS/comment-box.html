@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Comment</title>
+    <style>
+        .div-2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Please add your comment</h1>
+    <div id="comment-container">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut accusantium dolorem minus iure dicta, tempore
+            id.
+            Dolorem ipsam reiciendis est labore ratione, ullam eveniet fugiat omnis suscipit soluta voluptates ea!
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut accusantium dolorem minus iure dicta, tempore
+            id.
+            Dolorem ipsam reiciendis est labore ratione, ullam eveniet fugiat omnis suscipit soluta voluptates ea!
+        </p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut accusantium dolorem minus iure dicta, tempore
+            id.
+            Dolorem ipsam reiciendis est labore ratione, ullam eveniet fugiat omnis suscipit soluta voluptates ea!
+        </p>
+    </div>
+    <div class="div-2">
+        <textarea name="" id="new-comment" cols="60" rows="9"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+    </div>
+
+    <script>
+        /** 
+            1. hold the button / click the button
+            2. after click hold the input field text
+            3. add this text in paragraph
+            4. last, clear the input field
+        */
+        // 1. add event listener for hold the button
+        const postBtn = document.getElementById('btn-post');
+        postBtn.addEventListener('click', function () {
+            // console.log('post btn clicked');
+
+            // 2. get the input field text
+            const commentBox = document.getElementById('new-comment');
+            const newComment = commentBox.value;
+
+            // step-3. add new text replace paragraph
+            // 1. get the comment container
+            // 2. create a new element (p tag)
+            // 3. set the Text of the comment as innerText of the p tag
+            // 4. add the p tag using appendChild
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p);
+        })
+    </script>
+</body>
+
+</html>
