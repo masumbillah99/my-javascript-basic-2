@@ -38,4 +38,4 @@ btnDeposit.addEventListener('click', function () {
 
     // step-7 [clear the deposit field]
     depositField.value = '';
-})
+});
