@@ -1,3 +1,4 @@
+/** 
 function updatePhoneNumber(isIncrease) {
     const phoneNumberField = document.getElementById("phone-number-field");
     const phoneNumberString = phoneNumberField.value;
@@ -14,7 +15,8 @@ function updatePhoneNumber(isIncrease) {
 
     phoneNumberField.value = newPhoneNumber;
     return newPhoneNumber;
-}
+} */
+
 
 function updatePhoneTotalPrice(newPhoneNumber) {
     const phoneTotalPrice = newPhoneNumber * 1219;
@@ -23,19 +25,18 @@ function updatePhoneTotalPrice(newPhoneNumber) {
 }
 
 document.getElementById("btn-phone-plus").addEventListener("click", function () {
-    const newPhoneNumber = updatePhoneNumber(true);
+    const newPhoneNumber = updateCountNumber("phone-number-field", true);
 
     updatePhoneTotalPrice(newPhoneNumber);
-    calculateSubTotal();
+    calculateProductTotal();
 });
 
 document.getElementById("btn-phone-minus").addEventListener("click", function () {
-    const newPhoneNumber = updatePhoneNumber(false);
+    const newPhoneNumber = updateCountNumber("phone-number-field", false);
 
     updatePhoneTotalPrice(newPhoneNumber);
-    calculateSubTotal();
+    calculateProductTotal();
 });
-
 
 
 /**  ----- repeated code -----
