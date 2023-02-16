@@ -10,17 +10,10 @@
 // withdraw button event handler
 const btnWithdraw = document.getElementById("btn-withdraw");
 btnWithdraw.addEventListener("click", function () {
-    // step-2
     const newWithdrawAmount = getInputValue("withdraw-field");
-
-    // step-3
     const previousWithdrawTotal = getElementValue("withdraw-total");
-
-    // step-4 && step-4.5
     const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
     setElementValue("withdraw-total", newWithdrawTotal);
-
-    // step-5
     const previousBalanceTotal = getElementValue("balance-total");
     const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
     setElementValue("balance-total", newBalanceTotal);
