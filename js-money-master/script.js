@@ -21,33 +21,52 @@ function getInputValueById(elementId) {
     return inputAmount;
 }
 
-const balanceAmountText = document.getElementById('balance');
-const balanceAmount = parseFloat(balanceAmountText.innerText);
-
-document.getElementById('calculate-btn').addEventListener("click", function () {
+const calculateBtn = document.getElementById('calculate-btn');
+calculateBtn.addEventListener("click", function () {
     const incomeAmount = getInputValueById('income-field');
     const foodAmount = getInputValueById('food-field');
     const rentAmount = getInputValueById('rent-field');
     const clothesAmount = getInputValueById('clothes-field');
 
     const totalExpenses = foodAmount + rentAmount + clothesAmount;
-    const balance = incomeAmount - totalExpenses;
 
-    document.getElementById("total-expenses").innerText = totalExpenses;
-    balanceAmountText.innerText = balance;
+    if (incomeAmount >= totalExpenses) {
+        document.getElementById("total-expenses").innerText = totalExpenses;
+        const balance = incomeAmount - totalExpenses;
+        document.getElementById('balance').innerText = balance;
+    }
+    else {
+        alert('Cut your coat according to your cloth');
+        document.getElementById("total-expenses").innerText = 0;
+        document.getElementById('balance').innerText = 0;
+    }
 });
+
+function getTextElementById(elementId) {
+    const textElementAmount = document.getElementById(elementId);
+    const elementAmountString = textElementAmount.innerText;
+    const elementAmount = parseFloat(elementAmountString);
+    return elementAmount;
+}
 
 document.getElementById('btn-save').addEventListener('click', function () {
     const incomeAmount = getInputValueById('income-field');
     const percentageAmount = getInputValueById('saving-field');
 
     const savingAmount = (incomeAmount / 100) * percentageAmount;
-    console.log(savingAmount);
-    console.log(balanceAmount);
-    const remainingBalance = balanceAmount - savingAmount;
-    console.log(remainingBalance);
-
     document.getElementById('saving-amount').innerText = savingAmount;
+
+    const balanceAmount = getTextElementById('balance');
+
+    if (balanceAmount >= savingAmount) {
+        const remainingBalance = balanceAmount - savingAmount;
+        document.getElementById('remaining-balance').innerText = remainingBalance;
+    }
+    else {
+        alert("You don't have enough money to save");
+        document.getElementById('saving-amount').innerText = 0;
+        document.getElementById('remaining-balance').innerText = 0;
+    }
 });
 
 
