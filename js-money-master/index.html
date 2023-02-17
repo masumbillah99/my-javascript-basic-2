@@ -23,7 +23,7 @@
 </head>
 
 <body class="container">
-    <header class="my-5">
+    <header class="my-3">
         <h1 class="text-center text-success fw-bold">Money Master
             <img class="money-bag" src="images/money-bag.jpg" alt="">
         </h1>
@@ -32,42 +32,47 @@
         <section class="col-lg-6 col-md-12 img-section bg-success py-5 border border-dark rounded">
             <img class="w-75" src="images/money-calculate.jpg" alt="">
         </section>
-        <section class="col-lg-6 col-md-12 px-5 pt-5 bg-success text-white border border-dark rounded">
+        <section class="col-lg-6 col-md-12 px-5 pt-5 py-sm-5 bg-success text-white border border-dark rounded">
             <div class="text-center">
                 <h3 class="text-center mb-3">Income</h3>
                 <form class="">
                     <div class="d-flex mb-3">
                         <label class="fs-5">Income: </label>
-                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="income-field">
+                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="income-field"
+                            placeholder="10000">
                     </div>
                     <h3 class="text-center my-3">Expenses</h3>
                     <div class="d-flex mb-3">
                         <label class="fs-5 me-3">Food: </label>
-                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="food-field">
+                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="food-field"
+                            placeholder="3000">
                     </div>
                     <div class="d-flex mb-3">
                         <label class="fs-5 me-4">Rent:</label>
-                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="rent-field">
+                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="rent-field"
+                            placeholder="2000">
                     </div>
                     <div class="d-flex mb-3">
                         <label class="fs-5">Clothes: </label>
-                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="clothes-field">
+                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="clothes-field"
+                            placeholder="500">
                     </div>
                     <button id="calculate-btn" type="button"
                         class="btn btn-info fw-bold fs-5 px-5 py-2 my-3">Calculate</button>
                 </form>
             </div>
             <div class="text-center">
-                <h3 class="my-4">Total Expenses: <span id="total-expenses">5500</span></h3>
-                <h3>Balance: <span id="balance">4500</span></h3>
-                <div class="my-4">
-                    <label>Save:
-                        <input type="number" id="saving-field"> %
-                        <button id="btn-save">Save</button>
-                    </label>
+                <h3 class="my-4">Total Expenses: <span id="total-expenses">5500</span>&nbsp;tk</h3>
+                <h3>Balance: <span id="balance">4500</span>&nbsp;tk</h3>
+                <div class="my-4 fs-5 d-flex align-items-center justify-content-center">
+                    <label>Save: </label>
+                    <input class="form-control w-50 px-3 fs-5 fw-bold mx-3" type="number" id="saving-field"
+                        placeholder="20 (in percentage)">
+                    <span class="me-3 fw-bold">%</span>
+                    <button id="btn-save" class="btn btn-info fw-bold fs-5 px-5">Save</button>
                 </div>
-                <h3 class="pb-2">Saving Amount: <span id="saving-amount">2000</span></h3>
-                <h3>Remaining Balance: <span id="remaining-balance">2500</span></h3>
+                <h3 class="pb-2">Saving Amount: <span id="saving-amount">2000</span>&nbsp;tk</h3>
+                <h3>Remaining Balance: <span id="remaining-balance">2500</span>&nbsp;tk</h3>
             </div>
         </section>
     </main>
