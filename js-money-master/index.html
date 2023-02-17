@@ -5,14 +5,77 @@
     <title>Pin Matcher with JS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .img-section {
+            text-align: center;
+        }
+
+        .money-bag {
+            width: 100px;
+        }
+    </style>
 </head>
 
-<body>
+<body class="container">
+    <header class="my-5">
+        <h1 class="text-center text-success fw-bold">Money Master
+            <img class="money-bag" src="images/money-bag.jpg" alt="">
+        </h1>
+    </header>
+    <main class="row flex-lg-nowrap flex-wrap gap-3 my-3">
+        <section class="col-lg-6 col-md-12 img-section bg-success py-5 border border-dark rounded">
+            <img class="w-75" src="images/money-calculate.jpg" alt="">
+        </section>
+        <section class="col-lg-6 col-md-12 px-5 pt-5 bg-success text-white border border-dark rounded">
+            <div class="text-center">
+                <h3 class="text-center mb-3">Income</h3>
+                <form class="">
+                    <div class="d-flex mb-3">
+                        <label class="fs-5">Income: </label>
+                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="income-field">
+                    </div>
+                    <h3 class="text-center my-3">Expenses</h3>
+                    <div class="d-flex mb-3">
+                        <label class="fs-5 me-3">Food: </label>
+                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="food-field">
+                    </div>
+                    <div class="d-flex mb-3">
+                        <label class="fs-5 me-4">Rent:</label>
+                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="rent-field">
+                    </div>
+                    <div class="d-flex mb-3">
+                        <label class="fs-5">Clothes: </label>
+                        <input class="form-control px-5 w-75 fs-5 fw-bold ms-4" type="number" id="clothes-field">
+                    </div>
+                    <button id="calculate-btn" type="button"
+                        class="btn btn-info fw-bold fs-5 px-5 py-2 my-3">Calculate</button>
+                </form>
+            </div>
+            <div class="text-center">
+                <h3 class="my-4">Total Expenses: <span id="total-expenses">5500</span></h3>
+                <h3>Balance: <span id="balance">4500</span></h3>
+                <div class="my-4">
+                    <label>Save:
+                        <input type="number" id="saving-field"> %
+                        <button id="btn-save">Save</button>
+                    </label>
+                </div>
+                <h3 class="pb-2">Saving Amount: <span id="saving-amount">2000</span></h3>
+                <h3>Remaining Balance: <span id="remaining-balance">2500</span></h3>
+            </div>
+        </section>
+    </main>
 
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
