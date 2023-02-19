@@ -19,4 +19,16 @@ let student = {};
 // console.log(student.name.lname);
 // console.log(student.name);       // output: undefined
 const num = 43;
-console.log(num.toUpperCase());
+// console.log(num.toUpperCase());
+
+/** 5. URL (Uniform Resource Locator) error --  */
+// the URLError object represents an error when a global URL handling function was
+//  used in a wrong way.
+decodeURI('%');
+
+/** 6. Eval error --  */
+// the eval error object used to identify errors when using the global eval() function.
+
+/** 7. Aggregate error --  */
+
+/** 8. Internal error --  */
