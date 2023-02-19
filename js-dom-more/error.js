@@ -14,7 +14,7 @@ const money = 50;
 // for (let i = 0; i < 5; i++) {}
 // if(money >/2){}
 
-/** 4. reference error --  */
+/** 4. type error --  */
 let student = {};
 // console.log(student.name.lname);
 // console.log(student.name);       // output: undefined
