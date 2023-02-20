@@ -69,6 +69,24 @@ document.getElementById('btn-save').addEventListener('click', function () {
     }
 });
 
+// generate random bg color code
+function randomBgColor() {
+    const random = Math.floor(Math.round(Math.random() * 1000000).toString(6));
+    document.body.style.backgroundColor = '#' + random;
+}
+
+// document.getElementById("img-sect").onmouseover = randomBgColor();
+// console.log(randomBgColor());
+
+function randomBackground() {
+    let x = Math.floor(Math.random() * 256)
+    let y = Math.floor(Math.random() * 256)
+    let z = Math.floor(Math.random() * 256)
+    let bgColor = `rgb(${x}, ${y}, ${z})`
+    document.body.style.background = bgColor;
+}
+
+randomBackground();
 
 /** 
 document.getElementById('calculate-btn').addEventListener("click", function () {
